@@ -4,6 +4,8 @@ public class ResultadoEscolar {
 
         if(nota >= 7){
             System.out.println("O aluno foi aprovado ");
+        } else if(nota >= 5 && nota < 7){
+            System.out.println("O aluno está na recuperação");
         } else {
             System.out.println("O aluno foi reprovado");
         }
