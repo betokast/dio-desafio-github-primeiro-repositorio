@@ -6,6 +6,8 @@ public class CaixaEletronico {
         if(valorSolicitado < saldo){
             saldo = saldo - valorSolicitado;
             System.out.println("Seu saldo atualizado é: " + saldo);
+        } else {
+            System.out.println("Saldo insuficiente");
         }
     }
 }
