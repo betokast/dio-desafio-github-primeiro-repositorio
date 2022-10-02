@@ -62,8 +62,50 @@ public class ExemploList {
         System.out.println("Exiba a terceira nota adicionada: " + notas.get(2));
         System.out.println(notas.toString());
 
-        //Exibição de acordo critério de comparação
+        //Exibição de acordo critério de comparação menor
         System.out.println("Exiba a menor nota: " + Collections.min(notas));
+
+        //Exibição de acordo critério de comparação maior
+        System.out.println("Exiba a maior nota: " + Collections.max(notas));
+
+        //Exibição da soma de valores da list
+        Iterator<Double> iterator = notas.iterator(); //Método que itera dentro da list
+        Double soma = 0d;
+        while(iterator.hasNext()){ //Método hasNext verifica se há próximo elemento
+            Double next = iterator.next(); //Atribuição do próximo elemento à variável next
+            soma += next; //Soma dos próximos elemento com a soma
+        }
+        System.out.println("Exiba a soma de valores: " + soma);
+
+        //Exibição de média dos elementos da list
+        System.out.println("Exiba a média das notas: " + soma/notas.size());
+
+        //Remoção de determinado elemento da list
+        System.out.println("Remova a nota 0: ");
+        notas.remove(0d);
+        System.out.println(notas);
+
+        //Remoção de determinado elemento em determinada posição da list
+        System.out.println("Remova a nota da posição 0: ");
+        notas.remove(0);
+        System.out.println(notas);
+
+        //Remoção de determinado elemento de acordo com critério de comparação de tamanho
+        System.out.println("Remova as notas menores que 7 e exiba a lista: ");
+        Iterator<Double> iterator1 = notas.iterator();
+        while(iterator1.hasNext()){
+            Double next = iterator1.next();
+            if(next < 7) iterator1.remove();
+        }
+        System.out.println(notas);
+
+        //Deleção de todos os elementos da list
+        System.out.println("Apague toda a lista: ");
+        notas.clear();
+        System.out.println(notas);
+
+        //Verificação se a lista está vazia
+        System.out.println("Confira se a lista está vazia: " + notas.isEmpty());
 
     }
 }
